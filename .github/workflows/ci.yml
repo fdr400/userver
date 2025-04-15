@@ -217,6 +217,10 @@ jobs:
 
           - name: Run cmake
             run: |
+                cd ..
+                mkdir C++
+                mv userver C++/
+                cd C++/userver
                 mkdir build_debug
                 cd build_debug
                 cmake ${{matrix.cmake-flags}} ..
